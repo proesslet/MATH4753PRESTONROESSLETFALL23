@@ -1,0 +1,10 @@
+Package: MATH4753PRESTONROESSLETFALL23
+Type: Package
+Title: Math 4753 Functions
+Version: 0.1.0
+Author: Preston Roesslet
+Maintainer: Preston Roesslet <proesslet@gmail.com>
+Description: Lab functions we use in MATH4753.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
