@@ -1,0 +1,68 @@
+---
+title: "Package Documentation - Preston Roesslet"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{My Package Documentation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753PRESTONROESSLETFALL23)
+```
+
+# Introduction
+This is a working description of the functions in my package for MATH4753.
+
+## Data - FIREDAM
+
+I have included the FIREDAM dataset in my package. Below is an example showing how you can use this dataset to get the first 6 lines.
+```{r}
+head(fire)
+```
+
+## Function 1 - `myfun()`
+
+This function takes in a quantitative vector, and then returns another vector of the same size where each index has been raised to the power of 2.
+
+```{r}
+myfun(1:10)
+```
+
+## Function 2 - `ntickets()`
+
+This function calculates the number of tickets to be sold using discrete distribution and normal approximation. In the example below, t takes in the number of seats on the plane to be 400, with a 0.02 probability that the plane will be overbooked, and a 0.95 probability that a given person will show up.
+
+After it runs, it produces a plot of the discrete distribution and the normal approximation, and also returns a list of values containing the most efficient values of how many tickets should be sold for each calculation.
+
+```{r}
+ntickets(400, 0.02, 0.95)
+```
+
+## Function 2 - `histo()`
+This method creates a historgram of sample means. It takes in an input of `n` for the number, and then the number of iterations, `iter`. In the below example, we start with 10 and have 10000 iterations.
+```{r}
+histo(n=10,iter=10000)
+```
+
+## Function 3 - `myboot2()`
+
+This function uses the bootstrap method to generate a historgam of bootsrap sample means.
+
+```{r}
+myboot2(x=fire$DAMAGE)
+```
+
+## Function 4 - `linearscatter()`
+
+```{r}
+spruce.df = spruce
+linearscatter(spruce.df, "Height", "BHDiameter", "Breast Height Diameter (cm)", "Height (m)")
+```
