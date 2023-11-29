@@ -5,6 +5,11 @@
 #' @param fun - mean
 #' @param alpha - 0.05
 #' @param ... - ...
+#' @importFrom graphics hist
+#' @importFrom graphics abline
+#' @importFrom graphics segments
+#' @importFrom graphics text
+#' @importFrom stats quantile
 #'
 #' @export
 #'
@@ -16,12 +21,12 @@ myboot2<-function(iter=10000,x,fun="mean",alpha=0.05,...){
 
   y=sample(x,n*iter,replace=TRUE)
 
-  rs.mat=matrix(y,nr=n,nc=iter,byrow=TRUE)
+  rs.mat=matrix(y,nrow=n,ncol=iter,byrow=TRUE)
   xstat=apply(rs.mat,2,fun)
   ci=quantile(xstat,c(alpha/2,1-alpha/2))
   para=hist(xstat,freq=FALSE,las=1,main="Histogram of Bootstrap sample statistics",...)
 
-  mat=matrix(x,nr=length(x),nc=1,byrow=TRUE)
+  mat=matrix(x,nrow=length(x),ncol=1,byrow=TRUE)
 
   pte=apply(mat,2,fun)
   abline(v=pte,lwd=3,col="Black")

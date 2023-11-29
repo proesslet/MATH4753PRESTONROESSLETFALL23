@@ -5,12 +5,16 @@
 #' @param x Independent variable name
 #' @param xlb x-axis label
 #' @param ylb y-axis label
+#' @importFrom stats as.formula
+#' @importFrom stats lm
 #' @return A plot with independent and dependent variables labelled with a linear regression line.
 #' @export
 #' @examples
+#' \dontrun{
 #' spruce.df <- read.csv("SPRUCE.csv")
 #' linearscatter(spruce.df, "Height", "BHDiameter", "Breast Height Diameter (cm)", "Height (m)")
-linearscatter <- function(df, y, x, xlb, ylb){
+#' }
+linearscatter <- function(df, y, x, xlb, ylb) {
   # Convert strings to formula
   formula <- as.formula(paste(y, "~", x))
 

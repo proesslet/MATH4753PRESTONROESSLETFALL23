@@ -1,19 +1,17 @@
-#' A function to find the 95% confidence interval of a single sample x
+#' A function to find the 95percent confidence interval of a single sample x
 #'
 #' @param x a sample
+#' @importFrom stats t.test
 #'
-#' @return the 95% confidence interval
+#' @return the 95 percent confidence interval
 #' @export
 #'
 #' @examples
-#' myci(rnorm(15, mean = 250, sd = 25))
+#' x=rnorm(30, mean=10, sd=12)
+#' myci(x)
 myci <- function(x){
-  n1=length(x)
-  spsq=((n1-1)*var(snapper))/(n1-1)
-  t=qt(0.975,n1-1)
-  ci=c()
+  result <- t.test(x, conf.level = 0.95)
 
-  ci[1]=mean(x)-t*sqrt(spsq*(1/n1+1/n2))
-  ci[2]=mean(x)+t*sqrt(spsq*(1/n1+1/n2))
-  ci
+  # Print the confidence interval
+  result$conf.int
 }

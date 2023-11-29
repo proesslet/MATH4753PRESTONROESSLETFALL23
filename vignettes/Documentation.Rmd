@@ -46,13 +46,13 @@ After it runs, it produces a plot of the discrete distribution and the normal ap
 ntickets(400, 0.02, 0.95)
 ```
 
-## Function 2 - `histo()`
+## Function 3 - `histo()`
 This method creates a historgram of sample means. It takes in an input of `n` for the number, and then the number of iterations, `iter`. In the below example, we start with 10 and have 10000 iterations.
 ```{r}
 histo(n=10,iter=10000)
 ```
 
-## Function 3 - `myboot2()`
+## Function 4 - `myboot2()`
 
 This function uses the bootstrap method to generate a historgam of bootsrap sample means.
 
@@ -60,7 +60,7 @@ This function uses the bootstrap method to generate a historgam of bootsrap samp
 myboot2(x=fire$DAMAGE)
 ```
 
-## Function 4 - `linearscatter()`
+## Function 5 - `linearscatter()`
 
 ```{r}
 spruce.df = spruce

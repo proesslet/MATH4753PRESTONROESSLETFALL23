@@ -3,6 +3,9 @@
 #' @param mu - mu
 #' @param sigma - sigma
 #' @param a - ad
+#' @importFrom stats dnorm
+#' @importFrom graphics polygon
+#' @importFrom stats integrate
 #'
 #' @return The area (probability, P(X<=a))
 #' @export

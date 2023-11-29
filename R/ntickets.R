@@ -5,6 +5,11 @@
 #' @param N - number of seats available on the plane
 #' @param gamma - probability the plane will be overbooked
 #' @param p - probability that a given person will show up
+#' @importFrom stats qbinom
+#' @importFrom stats qnorm
+#' @importFrom stats pbinom
+#' @importFrom stats pnorm
+#' @importFrom graphics abline
 #'
 #' @return
 #' @export

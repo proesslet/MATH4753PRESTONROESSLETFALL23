@@ -24,6 +24,8 @@ A plot with independent and dependent variables labelled with a linear regressio
 Create a simple plot with a linear regression line
 }
 \examples{
+\dontrun{
 spruce.df <- read.csv("SPRUCE.csv")
 linearscatter(spruce.df, "Height", "BHDiameter", "Breast Height Diameter (cm)", "Height (m)")
+}
 }
